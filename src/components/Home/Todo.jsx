@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodo, deleteTodo } from "../../slice/todoSlice";
+import SingleTask from "./SingleTask";
 
 export default () => {
   const dispatch = useDispatch();
@@ -40,6 +41,9 @@ export default () => {
       <button onClick={todoAdd}>Add</button>
       <p style={{ marginBottom: "10px" }}>To do List are</p>
       <ul>{showTodos}</ul>
+
+      <h3>Extra single Task</h3>
+      <SingleTask />
     </>
   );
 };
